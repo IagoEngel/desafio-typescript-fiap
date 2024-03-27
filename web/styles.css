@@ -1,8 +1,7 @@
 .container {
     width: auto;
-    height: 100px;
     padding: 1rem;
-    background-color: rgb(187, 113, 113);
+    background-color: rgb(241, 241, 241);
 }
 
 .container>h1 {
@@ -21,7 +20,8 @@ table {
     width: 100%;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
@@ -29,4 +29,17 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.textbutton {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.textbutton:hover {
+    background: #eee;
 }

@@ -1,6 +1,6 @@
 const apiUrl = "http://localhost:4000/api";
 
-document.getElementById('get-livros').addEventListener('click', async (event) => {
+async function getLivros() {
     const anchor = document.getElementById('api-content');
 
     const response = await fetch(`${apiUrl}/livros`);
@@ -17,4 +17,4 @@ document.getElementById('get-livros').addEventListener('click', async (event) =>
 
         anchor.appendChild(livroHTML);
     }
-});
+}

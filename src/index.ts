@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(cors({
-    origin: ['http://127.0.0.1:5500']
+    origin: ['http://localhost:3000', 'http://127.0.0.1:5500']
 }));
 
 app.use('/api', express.json(), livrosRouter, editorasRouter, livrosEditorasRouter);
