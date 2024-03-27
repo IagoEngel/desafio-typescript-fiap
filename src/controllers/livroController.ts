@@ -9,7 +9,9 @@ export class LivroController {
             whereCondition = `WHERE id_livro = ${id_livro}`;
         }
 
-        db.all(`SELECT * FROM Livro ${whereCondition}`, (err, rows) => {
+        db.all(`SELECT li.*, ed.* FROM Livro as li
+        LEFT JOIN Livros_Editora as led ON led.id_livro = li.id_livro
+        LEFT JOIN Editora as ed ON ed.id_editora = led.id_editora ${whereCondition}`, (err, rows) => {
             if (err) {
                 console.log(err.message);
                 return res.status(400).json('Um erro inesperado ocorreu');
