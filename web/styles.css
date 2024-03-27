@@ -1,0 +1,32 @@
+.container {
+    width: auto;
+    height: 100px;
+    padding: 1rem;
+    background-color: rgb(187, 113, 113);
+}
+
+.container>h1 {
+    margin: 0;
+    padding: 0 0 1rem 0;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
